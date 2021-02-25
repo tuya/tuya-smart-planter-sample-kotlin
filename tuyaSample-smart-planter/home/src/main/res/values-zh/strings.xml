@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_module_title">家庭管理</string>
+
+    <string name="home_info_title">家庭信息</string>
+    <string name="home_default_home">当前家庭</string>
+</resources>

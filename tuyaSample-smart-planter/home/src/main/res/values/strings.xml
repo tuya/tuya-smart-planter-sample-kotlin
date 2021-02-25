@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_module_title">HOME MANAGEMENT</string>
+
+    <string name="home_info_title">HOME INFO</string>
+    <string name="home_default_home">Current Home</string>
+
+</resources>
