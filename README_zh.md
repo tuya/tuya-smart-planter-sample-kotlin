@@ -1,6 +1,6 @@
 Tuya Android Smart Planter Sample
 ========================
-[中文版](README_zh.md) | [English](README.md)
+[English](README.md) | [中文版](README_zh.md) 
 
 功能概述
 ------------------------
@@ -258,8 +258,6 @@ TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail(new ITuyaHomeResultCallback() 
 List<DeviceBean> deviceList = homeBean.getDeviceList();
 ```
 
-
-
 ##### 6.2、获取设备所有功能点
 
 ```java
@@ -273,6 +271,67 @@ Map<String, SchemaBean> schemaBeanList = TuyaHomeSdk.getDataInstance().getSchema
 ```java
 ITuyaDevice.publishDps(dps, callback);
 ```
+
+**参数说明**
+
+| 参数     | 说明                                        |
+| -------- | ------------------------------------------- |
+| dps      | data points, 设备功能点，格式为 json 字符串 |
+| callback | 发送控制指令是否成功的回调                  |
+
+DeviceBean 类 dps 属性定义了设备的状态，称作数据点（ dp 点）或功能点。`dps` 字典里的每个 `key` 对应一个功能点的 `dpId`，`dpValue` 为该功能点的值。
+
+**指令格式**
+
+发送控制指令按照以下格式： {"(dpId)":"(dpValue)"}
+
+**示例代码**
+
+假设开灯的设备功能点是 101，那么开灯的控制代码如下所示：
+
+```java
+mDevice.publishDps("{\"101\": true}", new IResultCallback() {
+    @Override
+    public void onError(String code, String error) {
+        Toast.makeText(mContext, "开灯失败", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onSuccess() {
+        Toast.makeText(mContext, "开灯成功", Toast.LENGTH_SHORT).show();
+    }
+});
+```
+
+植物生长机DP控制点：
+
+1.开关：启动、关闭设备
+
+2.水箱抽水水泵开关：在设备启动后，开启水泵，可以往水箱中注水
+
+3.当前温度、湿度显示
+
+4.灯光定时：控制灯照时间
+
+5.灯光倒计时
+
+6.故障告警：展示故障代码
+
+7.设置最大温度：当温度高于最大温度时，光照关闭，风扇会启动
+
+8.设置最大湿度：当湿度高于最大湿度时，风扇会启动
+
+9.水箱容积
+
+10.设置光照颜色
+
+11.设置最小温度：当温度低于最小温度时，光照打开
+
+12.设置最小湿度：当湿度低于最小湿度时，土壤水泵会打开，从水箱中给植物浇水
+
+13.自动光照开关
+
+14.移除设备开关：移除当前配网设备，使设备重新进入配网模式
 
 ##### 6.4、设备移除
 

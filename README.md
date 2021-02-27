@@ -1,6 +1,6 @@
 Tuya Android Smart Planter Sample
 ========================
-[中文版](README_zh.md) | [English](README.md)
+[English](README.md) | [中文版](README_zh.md) 
 
 Overview
 ------------------------
@@ -260,8 +260,6 @@ The onSuccess method of this interface will return `HomeBean`, and then call `ge
 List<DeviceBean> deviceList = homeBean.getDeviceList();
 ```
 
-
-
 ##### 6.2 Get all the function points of the device
 
 ```java
@@ -275,6 +273,53 @@ The device control interface function is to send function points to the device t
 ```java
 ITuyaDevice.publishDps(dps, callback);
 ```
+
+**Parameters**
+
+| Parameters | Description                                               |
+| ---------- | --------------------------------------------------------- |
+| dps        | data points, device function point, format is json string                                                         |
+| callback   | Callback to send control instruction success              |
+
+The dps attribute of the DeviceBean class defines the state of the device, and is called the data point (DP) or the function point. Each key in the dps dictionary refers to a dpId of a function point, and the dpValue is the value of the function point.
+
+**Command Format**
+
+The control commands shall be sent in the format given below. {"(dpId)":"(dpValue)"}
+
+**Example**
+
+Assuming that the function point of the device that turns on the light is 101, the control code for turning on the light is as follows:
+
+```java
+mDevice.publishDps("{\"101\": true}", new IResultCallback() {
+  @Override
+  public void onError(String code, String error) {
+      Toast.makeText(mContext, "turn on the light failure", Toast.LENGTH_SHORT).show();
+  }
+  @Override
+  public void onSuccess() {
+      Toast.makeText(mContext, "turn on the light success", Toast.LENGTH_SHORT).show();
+  }
+});
+```
+
+DP control points of plant growth machine:
+
+1. Switch: start and close the device
+2. Water tank pumping pump switch: after the equipment is started, turn on the water pump to fill the water tank
+3. Current temperature and humidity display
+4. Timing of lights: control the lighting time
+5. Light countdown
+6. Fault warning: display the fault code
+7. Set the maximum temperature: when the temperature is higher than the maximum temperature, the light will turn off and the fan will start
+8. Set the maximum humidity: when the humidity is higher than the maximum humidity, the fan will start
+9. Water tank volume
+10. Set light colors
+11. Set the minimum temperature: When the temperature is below the minimum temperature, the light turns on
+12. Set the minimum humidity: When the humidity is below the minimum humidity, the soil pump will be turned on to water the plants from the tank
+13. Automatic light switch
+14. Device removal switch: remove the current distribution network equipment, so that the equipment into the distribution network mode again
 
 ##### 6.4. Remove device
 
