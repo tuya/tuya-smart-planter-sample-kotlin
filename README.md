@@ -16,11 +16,11 @@ Tuya Android Smart Planter Sample has achieved the following functions:
 
 ### Related Hardware & Tuya IoTOS Embedded Github Demo
 
-For Smart WiFi Plant Growth Machine Demo documentation，pleas check Tuya Demo Center：[https://developer.tuya.com/en/demo/smart-planter](https://developer.tuya.com/cn/demo/smart-planter)
+- For Smart WiFi Plant Growth Machine Demo documentation，please check Tuya Demo Center：[https://developer.tuya.com/en/demo/smart-planter](https://developer.tuya.com/cn/demo/smart-planter)
 
-Tuya IoTOS Embedded Demo WiFi & BLE Smart-Planter Github Repo link: [https://github.com/tuya/tuya-iotos-embeded-demo-wifi-ble-smart-planter/blob/master/README_zh.md](https://github.com/tuya/tuya-iotos-embeded-demo-wifi-ble-smart-planter/blob/master/README_zh.md)
+- Tuya IoTOS Embedded Demo WiFi & BLE Smart-Planter Github Repo link: [https://github.com/tuya/tuya-iotos-embeded-demo-wifi-ble-smart-planter/blob/master/README_zh.md](https://github.com/tuya/tuya-iotos-embeded-demo-wifi-ble-smart-planter/blob/master/README_zh.md)
 
-Evaluation Kits：[Sandwich Evaluation Kits](https://developer.tuya.com/en/docs/iot/device-development/tuya-development-board-kit/tuya-sandwich-evaluation-kits/-tuya-sandwich-evaluation-kits?id=K97o0ixytemvr)
+- Evaluation Kits：[Sandwich Evaluation Kits](https://developer.tuya.com/en/docs/iot/device-development/tuya-development-board-kit/tuya-sandwich-evaluation-kits/-tuya-sandwich-evaluation-kits?id=K97o0ixytemvr)
 
 Get Started
 ------------------------
