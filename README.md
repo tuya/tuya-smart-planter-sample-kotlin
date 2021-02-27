@@ -17,13 +17,13 @@ Tuya Android Smart Planter Sample has achieved the following functions:
 Get Started
 ------------------------
 
-#### 一、Project configuration
+#### 1. Project configuration
 
 1、According to [Preparation for Integration](https://developer.tuya.com/en/docs/app-development/android-app-sdk/preparation?id=Ka7mqlxh7vgi9) document description, register Tuya developer account and complete the application To create, replace the package name of Sample with the package name set during creation.
 
 2、According to the [Integration SDK](https://developer.tuya.com/en/docs/app-development/android-app-sdk/integrated?id=Ka7mqm2xsvs4n) document description, integrate the security picture and reset the AppKey And AppSecret.
 
-#### 二、UI
+#### 2. UI
 
 After completing the above project configuration, run the program, the App displays the various interfaces as follows:
 
@@ -37,11 +37,11 @@ After completing the above project configuration, run the program, the App displ
 
  
 
-#### 三、User Management Module
+#### 3. User Management Module
 
 The user management module involves user registration and login and password reset. For more information about user management and Api interface calls, please refer to [User Management](https://developer.tuya.com/en/docs/app-development/android-app-sdk/user-management/usermanage?id=Ka69qtzy9l8nc).
 
-##### 3.1、Get  verification code
+##### 3.1 Get  verification code
 
 ```java
 // phone
@@ -63,7 +63,7 @@ public interface IResultCallback {
     void onSuccess();
 }
 ```
-##### 3.2、Registered
+##### 3.2 Registered
 
 ```java
 // phone
@@ -80,7 +80,7 @@ public interface IRegisterCallback {
 }
 ```
 
-##### 3.3、Login
+##### 3.3 Login
 
 ```java
 // phone
@@ -96,7 +96,7 @@ public interface ILoginCallback {
 }
 ```
 
-##### 3.4、Logout
+##### 3.4 Logout
 
 ```java
 TuyaHomeSdk.getUserInstance().logout(new ILogoutCallback() {
@@ -117,7 +117,7 @@ TuyaHomeSdk.getUserInstance().logout(new ILogoutCallback() {
 
 Before adding Tuya devices, you need to create a family. This Demo only creates a default family based on the user’s mobile phone information when the program is launched. For more information about family management and related API interfaces, please refer to [Home Management](https://developer.tuya.com/en/docs/app-development/android-app-sdk/home-management/homemanage?id=Ka6kjkgere4ae).
 
-##### 4.1、Get the family list
+##### 4.1 Get the family list
 
 ```java
 void queryHomeList(ITuyaGetHomeListCallback callback)
@@ -130,7 +130,7 @@ public interface ITuyaGetHomeListCallback {
 }
 ```
 
-##### 4.2、Create a family
+##### 4.2 Create a family
 
 ```java
 void createHome(String name, double lon, double lat, String geoName, List<String> rooms, ITuyaHomeResultCallback callback)
@@ -145,7 +145,7 @@ public interface ITuyaHomeResultCallback {
 
 
 
-#### 五、Wi-Fi Network Configuration Mode
+#### 5. Wi-Fi Network Configuration Mode
 
 The intelligent WiFi plant growth machine supports EZ network distribution and AP network distribution in WiFi mode. This demo only provides EZ network distribution examples. For more equipment network configuration information and API interfaces, please refer to [Wi-Fi Network Configuration](https://developer.tuya.com/en/docs/app-development/android-app-sdk/wifinetwork?id=Ka6ki8lbwu82c).
 
@@ -153,7 +153,7 @@ Before the Wi-Fi network configuration, the SDK needs to obtain the network conf
 The term of validity of Token is 10 minutes, and the Token becomes invalid once the network configuration succeeds.
 A new Token has to be obtained if you have to reconfigure the network.
 
-##### 5.1、**Get Network Configuration Token**
+##### 5.1 **Get Network Configuration Token**
 
 ```java
 TuyaHomeSdk.getActivatorInstance().getActivatorToken(homeId, 
@@ -218,7 +218,7 @@ ActivatorBuilder builder = new ActivatorBuilder()
 | activatorModel | Configuration Mode, EZ Mode: ActivatorModelEnum.TY_EZ        |
 | timeout        | Configuration timeout, default setting is 100s, unit is second |
 
-##### 5.2、Configuration method invocation
+##### 5.2 Configuration method invocation
 
 ```java
 ITuyaActivator mTuyaActivator = TuyaHomeSdk.getActivatorInstance().newMultiActivator(builder);
@@ -232,11 +232,11 @@ mTuyaActivator.onDestroy();
 
 
 
-#### 六、Device Management
+#### 6. Device Management
 
 When the equipment is successfully configured, you can view the plant growth machine equipment that has been configured in the equipment list. Select the equipment and enter the control panel. For more information about the equipment and API interface, please refer to [Device Management](https://developer.tuya.com/en/docs/app-development/android-app-sdk/device-management/devicemanage?id=Ka6ki8r2rfiuu).
 
-##### 6.1、Device List
+##### 6.1 Device List
 
 The device control must first initialize the data, call the following method to obtain the device information under the family, and it is sufficient to initialize it once every time the APP is alive. In addition, the switching family also needs to be initialized:
 
@@ -262,13 +262,13 @@ List<DeviceBean> deviceList = homeBean.getDeviceList();
 
 
 
-##### 6.2、Get all the function points of the device
+##### 6.2 Get all the function points of the device
 
 ```java
 Map<String, SchemaBean> schemaBeanList = TuyaHomeSdk.getDataInstance().getSchema(int deviceId)
 ```
 
-##### 6.3、Device control
+##### 6.3. Device control
 
 The device control interface function is to send function points to the device to change the device state or function.
 
@@ -276,7 +276,7 @@ The device control interface function is to send function points to the device t
 ITuyaDevice.publishDps(dps, callback);
 ```
 
-##### 6.4、Remove device
+##### 6.4. Remove device
 
 Used to remove a device from the user device list
 
@@ -284,7 +284,7 @@ Used to remove a device from the user device list
 void removeDevice(IResultCallback callback);
 ```
 
-##### 6.5、Reset
+##### 6.5. Reset
 
 It is used to reset the device and restore it to the factory state. After the device is restored to the factory settings, it will re-enter the network-ready state (quick connection mode), and the related data of the device will be cleared.
 
@@ -294,7 +294,7 @@ void resetFactory(IResultCallback callback)；
 
 
 
-#### 七、DIY 
+#### 7. DIY 
 
 It can be seen through the control panel of the intelligent plant growth machine that we can monitor and control the switch, temperature, humidity and other information of the plant growth machine. On this basis, the developer can perform different DIY operations on the device by setting different scenarios , For example, you can set a scene to automatically turn on the water pump switch when the temperature is greater than 30 degrees Celsius.
 
