@@ -44,7 +44,7 @@ class HomeFuncWidget {
     }
 
     private fun initView(rootView: View) {
-        tvCurrentHomeName = rootView.findViewById<TextView>(R.id.tv_current_home_name);
+        tvCurrentHomeName = rootView.findViewById(R.id.tv_current_home_name);
         updateHomeInfoIfNeed()
     }
 
