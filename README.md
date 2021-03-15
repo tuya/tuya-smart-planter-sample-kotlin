@@ -14,6 +14,14 @@ Tuya Android Smart Planter Sample has achieved the following functions:
 - Equipment distribution network module (EZ distribution network mode)
 - Equipment control module (plant growth machine switch, wind speed control, temperature and humidity monitoring, soil humidity, light, etc.)
 
+|                       Fully-Functional Smart Planter                       |                      Lite Smart Planter                    |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://images.tuyacn.com/app/aiwen/tuya-smart-planter/4e61e17e33f74f59bf484f7caf47a2dd(1).jpg" style="zoom:15%;" /> | <img src="https://images.tuyacn.com/app/aiwen/tuya-smart-planter/a148f86f05764d9aa85780887e14fc00(1).jpg" style="zoom:10%;" /> |
+| [Fully-Functional Smart Planter Demo](https://developer.tuya.com/en/demo/smart-planter) | [Lite Smart Planter Demo](https://developer.tuya.com/en/demo/smart-planter-lite) |
+
+
+
+
 ### Related Hardware & Tuya IoTOS Embedded Github Demo
 
 - For Smart WiFi Plant Growth Machine Demo documentation，please check Tuya Demo Center：[https://developer.tuya.com/en/demo/smart-planter](https://developer.tuya.com/cn/demo/smart-planter)

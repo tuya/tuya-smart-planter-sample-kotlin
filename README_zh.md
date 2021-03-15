@@ -14,6 +14,16 @@ Tuya Android Smart Planter Sample 已实现以下功能：
 - 设备配网模块(EZ配网模式)
 - 设备控制模块(植物生长机开关、风速控制、温湿度监测、土壤湿度、光照等)
 
+
+
+
+|                       超全版植物生长机                       |                       精简版植物生长机                       |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://images.tuyacn.com/app/aiwen/tuya-smart-planter/4e61e17e33f74f59bf484f7caf47a2dd(1).jpg" style="zoom:15%;" /> | <img src="https://images.tuyacn.com/app/aiwen/tuya-smart-planter/a148f86f05764d9aa85780887e14fc00(1).jpg" style="zoom:10%;" /> |
+| [超全功能智能植物生长机Demo](https://developer.tuya.com/cn/demo/smart-planter) | [精简版智能植物生长机Demo](https://developer.tuya.com/cn/demo/smart-planter-lite) |
+
+
+
 ### 相关硬件和嵌入式项目
 
 - 智能WiFi植物生长机Demo的详细介绍文档，请参考涂鸦Demo中心：[https://developer.tuya.com/cn/demo/smart-planter](https://developer.tuya.com/cn/demo/smart-planter)
@@ -21,6 +31,9 @@ Tuya Android Smart Planter Sample 已实现以下功能：
 - Tuya IoTOS Embeded Demo WiFi & BLE Smart-Planter 项目 Github 仓库: [https://github.com/tuya/tuya-iotos-embeded-demo-wifi-ble-smart-planter/blob/master/README_zh.md](https://github.com/tuya/tuya-iotos-embeded-demo-wifi-ble-smart-planter/blob/master/README_zh.md)
 
 - 开发板套件相关详情请参考：[三明治开发套件](https://developer.tuya.com/cn/docs/iot/device-development/tuya-development-board-kit/tuya-sandwich-evaluation-kits/-tuya-sandwich-evaluation-kits?id=K97o0ixytemvr)
+
+
+
 
 
 开始
