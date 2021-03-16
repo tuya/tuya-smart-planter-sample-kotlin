@@ -19,7 +19,7 @@ Tuya Android Smart Planter Sample 已实现以下功能：
 
 |                       超全版植物生长机                       |                       精简版植物生长机                       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://images.tuyacn.com/app/aiwen/tuya-smart-planter/4e61e17e33f74f59bf484f7caf47a2dd(1).jpg" style="zoom:15%;" /> | <img src="https://images.tuyacn.com/app/aiwen/tuya-smart-planter/a148f86f05764d9aa85780887e14fc00(1).jpg" style="zoom:10%;" /> |
+| <img src="https://images.tuyacn.com/app/aiwen/tuya-smart-security/full-smart-planter-tiny.jpeg" style="zoom:15%;" /> | <img src="https://images.tuyacn.com/app/aiwen/tuya-smart-security/lite-smart-planter-tiny.jpeg" style="zoom:10%;" /> |
 | [超全功能智能植物生长机Demo](https://developer.tuya.com/cn/demo/smart-planter) | [精简版智能植物生长机Demo](https://developer.tuya.com/cn/demo/smart-planter-lite) |
 
 
