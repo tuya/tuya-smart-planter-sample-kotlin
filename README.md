@@ -129,7 +129,7 @@ TuyaHomeSdk.getUserInstance().logout(new ILogoutCallback() {
 
 > If it prompts insufficient permissions when registering or logging in, please check whether the project configuration steps are completed correctly.
 
-#### 四、Home Management Module
+#### 4. Home Management Module
 
 Before adding Tuya devices, you need to create a family. This Demo only creates a default family based on the user’s mobile phone information when the program is launched. For more information about family management and related API interfaces, please refer to [Home Management](https://developer.tuya.com/en/docs/app-development/android-app-sdk/home-management/homemanage?id=Ka6kjkgere4ae).
 
